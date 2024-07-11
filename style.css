@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebecee;
+    transition: all 0.3s all;
+}
+
+main {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: #b4b4b4 1px 2px 3px;
+}
+
+#display {
+    flex: 1;
+    padding: 5px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
+}
+
+#btns {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button:not(#mode) {
+    border: 0;
+    outline: none;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 12px ;
+    background-color: #f8f8f8;
+    transition: all 0.15s ease;
+    cursor: pointer;
+    box-shadow: #d0d0d0 2px 3px 3px 2px;
+    font-family: 'Poppins', sans-serif;
+    transform: translate(-2px, -2px);
+}
+
+button:not(#mode):last-child {
+    grid-column: 4/6;
+    border-radius: 12px;
+}
+
+.action:not(#mode) {
+    background-color: #20ceb2;
+    color: #fff;
+}
+
+.operator:not(#mode) {
+    background-color: #d3dde5;
+}
+
+button:not(#mode):hover {
+    box-shadow: #aaa 0.5px 0.5px 1px 1px;
+    transform: translate(0, 0);
+}
+
+#mode {
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+#mode:hover {
+    background-color: #fff;
+}
+#mode:active {
+    background-color: #000;
+}
+
+
+/* dark mode */
+body.darkmode {
+    background-color: #505050;
+} main.darkmode {
+    background-color: #566a77;
+    box-shadow: #212121 1px 2px 3px;
+} #display.darkmode {
+    background-color: #566a77;
+    color: #fff;
+} button.darkmode:not(#mode) {
+    background-color: #566a77;
+    box-shadow: #434343c2 2px 3px 3px 2px;
+    color: #fff;
+} .action.darkmode:not(#mode) {
+    background-color: #ffd85b;
+    color: #566a77;
+} .operator.darkmode:not(#mode) {
+    background-color: #849db0;
+} button.darkmode:not(#mode):hover {
+    box-shadow: #434343c2 0.5px 0.5px 1px 1px;
+} #mode.darkmode {
+    color: #fff;
+} #mode.darkmode:hover {
+    background-color: #000;
+} #mode.darkmode:active {
+    background-color: #fff;
+}
